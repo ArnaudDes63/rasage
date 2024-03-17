@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+    
+    <title>Ma page d'article</title>
+</head>
+<body>
+    <header>
+        <h1>Article</h1>
+    </header>
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="./article.html">Article</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section class="container mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Carrousel des images -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/philips/tondeuse.jpg" class="d-block carousel-img" alt="Image de la tondeuse philips">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/philips/tondeuse2.jpg" class="d-block carousel-img" alt="Deuxième Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/philips/tondeuse3.jpg" class="d-block carousel-img" alt="Troisième Image">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Précédent</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Suivant</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                </div>
+                <!-- Miniatures des images -->
+                <div class="row mt-3">
+                    <div class="col">
+                        <img src="./images/philips/tondeuse.jpg" class="d-block small-thumbnail img-thumbnail" alt="Miniature 1">
+                    </div>
+                    <div class="col">
+                        <img src="./images/philips/tondeuse2.jpg" class="d-block small-thumbnail img-thumbnail" alt="Miniature 2">
+                    </div>
+                    <div class="col">
+                        <img src="./images/philips/tondeuse3.jpg" class="d-block small-thumbnail img-thumbnail" alt="Miniature 3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <article>
+                    <h2>Philips Série 3000 Tondeuse corps étanche</h2>
+                    <p> À propos de cet article
+
+                        Full Body Care Tondeuse douce pour la peau pour les aisselles, le haut du corps, l'aine et les jambes
+                        Doux pour la peau La tête de rasage possède des pointes arrondies pour la protection et un film hypoallergénique
+                        Peigne bidirectionnel pour poils du corps Peigne amovible de 3 mm pour couper les cheveux
+                        La batterie NiMH se recharge en 1 heure et a une durée de fonctionnement allant jusqu'à 50 minutes
+                        Comprend une tondeuse corporelle Series 3000, un peigne corporel (3, 5, 7 mm), un câble de charge et un manuel d'utilisation
+                        100 % imperméable Pour des résultats confortables et parfaits, même sous la douche. La salle du corps est complètement imperméable, vous pouvez donc simplement la rincer après utilisation. Pour les cheveux plus longs, vous pouvez obtenir de meilleurs résultats si les cheveux sont secs.
+                    </p>
+                    <h3>Commentaires :</h3>
+                    <ul>
+                        <li>Résultats nickel pour cette petite tondeuse. Permet une épilation de près même dans des régions sensibles. À un prix plus que correct. Très content de mon achat. Je recommande.</li>
+                        <li>Très bien car pas d'équipement qui ne sert à rien. Simple et efficace. Fait son travail. Facile à utiliser. Je recommande</li>
+                        <li>Bon materiel</li>
+                    </ul>
+                    <a href="https://amzn.to/3Pemi0r" target="_blank">Voir l'article </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mon Site Web. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript pour la navigation à travers les miniatures
+        $(document).ready(function(){
+            $('.img-thumbnail').click(function(){
+                $('#carouselExampleIndicators').carousel($(this).parent().index());
+            });
+        });
+    </script>
+</body>
+</html>
